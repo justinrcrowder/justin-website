@@ -8,6 +8,8 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 img {
@@ -53,14 +55,24 @@ img {
     color: #3A405A;
     background-color: #AEC5EB;
     width: 100%;
-    flex: 2;
+    flex: 3;
  }
 
+.header-text {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   margin: auto;
+   color: #3A405A;
+   background-color: #AEC5EB;
+   width: 40%;
+}
+
  .header-section img {
-      width: 400px;
-      height: 400px;
-      margin-left: 30px;
+      margin: 2em;
+      margin-left: auto;
       border-radius: 2em;
+      width: 40%;
  }
 
  .project-section {
@@ -72,12 +84,11 @@ img {
     color: #AEC5EB;
     background-color: #3A405A;
     width: 100%;
-    flex: 2;
+    flex: 3;
  }
 
  .projects {
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
     width: 100%;
  }
@@ -97,8 +108,8 @@ img {
 }
 
  .project img {
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     margin: 20px;
     border-radius: 2em;
  }
@@ -121,22 +132,36 @@ img {
 
 
 @media screen and (max-width: 600px) {
-   .nav-section ul li {
-      padding: 0 10px;
-   }
-   .nav-section ul li a {
-      font-size: medium;
-   }
-   .header-section img {
-      width: 200px;
-      height: 200px;
-   }
-   .project img {
-      width: 100px;
-      height: 100px;
-   }
-   .project h3 {
-      font-size: medium;
-   }
+      .nav-section ul li {
+         padding: 0 10px;
+      }
+
+      .header-section {
+         flex-direction: column;
+         align-content: center;
+      }
+
+      .header-text {
+         width: 80%;
+         text-align: center;
+      }
+
+      .header-section img {
+         width: 70%;
+         margin: 0;
+         margin-bottom: 20px;
+      }
+      .projects {
+         flex-direction: column;
+         align-items: center;
+      }
+      .project {
+         width: 80%;
+      }
+      .project img {
+         width: 80%;
+         height: 80%;
+         /* margin: 20px; */
+      }
 }
 
